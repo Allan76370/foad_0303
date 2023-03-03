@@ -1,0 +1,30 @@
+-- Afficher l'id et le salaire des employés qui ont un salaire inferieur à 3000$ ?
+-- SELECT employee_id, salary, first_name,last_name FROM employees WHERE salary < 3000;
+
+-- Augmenter de 10% les employés qui ont un salaire inferieur à 3000$ ?
+-- UPDATE employees SET salary = salary * 1.1 WHERE salary < 3000;
+
+-- Afficher le nom,prenom,date d'embauche(hire_date) et salaire des employés en classant par ordre de salaire decroisant
+-- SELECT last_name, first_name, hire_date, salary FROM employees ORDER BY salary DESC;
+
+-- Afficher le nombre des employés ayant un telephone unique ?
+-- SELECT count( DISTINCT phone_number ) FROM employees;
+
+-- Afficher le nom,prenom,salaire des 5 employés ayant un haut salaire ?
+-- SELECT last_name, first_name,salary FROM employees ORDER BY salary DESC LIMIT 5;
+
+-- Afficher le nom,prenom,salaire des employés ayant un salaire superieur a 10000$ et faisant partit du departement des ventes(sales) ?
+-- SELECT last_name, first_name, salary FROM employees WHERE salary > 10000 AND  department_id = 8;
+
+-- Afficher le nom,prenom,salaire des employés ayant un salaire compris entre 5000$ et 7000$ classé par salaire ?
+-- SELECT last_name, first_name, salary FROM employees WHERE salary BETWEEN 5000 AND 7000 ORDER BY salary;
+
+-- Afficher le nom,prenom des employés qui n'ont pas de telephone ?
+-- SELECT COUNT(*) FROM employees WHERE phone_number IS NULL OR phone_number = '';
+
+-- Afficher le nom,prenom des employés qui travaillent dans en marketing et finance ?
+-- SELECT last_name, first_name FROM employees WHERE department_id = 2 and  10;
+
+-- Afficher le nom,prenom,department des employés qui travaillent en administration,IT et Finance ?
+-- SELECT department_id, department_name FROM departments WHERE department_name IN ('Administration','IT','Finance');
+-- SELECT last_name, first_name, department_id FROM employees WHERE department_id IN (1,6,10);
